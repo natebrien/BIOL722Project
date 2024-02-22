@@ -1,7 +1,7 @@
 **Background on gargammel**.
 Gargammel will be used to simulate aDNA sequence data for this project. Although gargammel has the capability to simulate both modern human and bacterial contamination in the sample, only the endogenous human sequences will be simulated. The resulting simulated sequences have fragmentation patterns and deamination patterns characteristic of aDNA, and have Illumina adapters added to simulate raw sequencing reads. Gargammel putputs gzipped fastq files. Gargammel also does not simulate the effects of bisulfite treatment.
 
-Reference: 
+Reference: Renaud, G., Hanghoej, K., Willerslev, E. & Orlando, L. (2016). gargammel: a sequence simulator for ancient DNA _Bioinformatics_, btw670. 
 
 **Prep for running gargammel**.
 Infoserv has gargammel installed through conda, therefore the necessary conda environment needs to be activated before running gargammel or it will throw an error. Activate the gargammel conda env by running: 
