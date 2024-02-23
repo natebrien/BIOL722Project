@@ -24,6 +24,15 @@ These flags specify (in order): the output directory, the number of fragments to
 
 I'm using n=1000 because a general shotgun sequencing run will generate 1M reads, but only a small portion of those reads will be endogenous, sometimes as small as 1%. I'm also using a maximum size of 100 based on fragment size distributions for ancient DNA. The deamination damage patterns are taken from the publication Briggs et al. 2007 which is recommended in gargammel documentation. 
 
+The fragment length distribution file should be in the format:
+
+| length | freq ex |
+| ------ | ------- |
+| 40     | 0.0525  |
+| 41     | 00491   |
+
+Values should be tab-delimited. 
+
 **Quality control checks**.
 Quality control at this stage means checking that the fragmentation and deamination patterns of the simulated sequences match what we would expect from ancient DNA. 
 
