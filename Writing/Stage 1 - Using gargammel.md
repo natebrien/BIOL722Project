@@ -3,37 +3,26 @@ Gargammel will be used to simulate aDNA sequence data for this project. Although
 
 Reference: Renaud, G., Hanghoej, K., Willerslev, E. & Orlando, L. (2016). gargammel: a sequence simulator for ancient DNA _Bioinformatics_, btw670. 
 
-**Prep for running gargammel**.
+### Prep for running garammel
 Infoserv has gargammel installed through conda, therefore the necessary conda environment needs to be activated before running gargammel or it will throw an error. Activate the gargammel conda env by running: 
 
-	$ conda activate /home/sam/envs/gargammel
+	$ conda activate /home/sam/miniconda3/envs/gargammel
 
 If this works correctly you should see (gargammel) before [yourname@info2020]. 
 
-**Parameters for gargammel**.
+### Parameters for gargammel
 We want gargammel to create simulated ancient DNA fragments with methylation and deamination damage. To do this we need to run gargammel using the following flags (with accompanying explanations).
 
 	- o
 	- n 1000
-	- f (file.txt)
-	- maxsize 100
-	-- methyl
+	- l 35
 	- damage [0.024, 0.36, 0.0097, 0.68]
 
-These flags specify (in order): the output directory, the number of fragments to simulate, the frequency distribution of fragment lengths, the maximum size of fragments, to add methylation-specific damage, and the damage parameters. 
+These flags specify (in order): the output directory, the number of fragments to simulate, the fragment length, to add methylation-specific damage and the damage parameters. 
 
-I'm using n=1000 because a general shotgun sequencing run will generate 1M reads, but only a small portion of those reads will be endogenous, sometimes as small as 1%. I'm also using a maximum size of 100 based on fragment size distributions for ancient DNA. The deamination damage patterns are taken from the publication Briggs et al. 2007 which is recommended in gargammel documentation. 
+I'm using n=1000 because a general shotgun sequencing run will generate 1M reads, but only a small portion of those reads will be endogenous, sometimes as small as 1%. I'm also using a fragment length of 35 based on FLDs from ancient DNA projects that typically indicate that counts peak around the 30's. The deamination damage patterns are taken from the publication Briggs et al. 2007 which is recommended in gargammel documentation. 
 
-The fragment length distribution file should be in the format:
-
-| length | freq ex |
-| ------ | ------- |
-| 40     | 0.0525  |
-| 41     | 00491   |
-
-Values should be tab-delimited. 
-
-**Quality control checks**.
+### Quality control checks
 Quality control at this stage means checking that the fragmentation and deamination patterns of the simulated sequences match what we would expect from ancient DNA. 
 
 
