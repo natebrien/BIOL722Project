@@ -36,6 +36,7 @@ Files output:
 ### Quality control checks
 Quality control at this stage means checking that the fragmentation and deamination patterns of the simulated sequences match what we would expect from ancient DNA. 
 
+#### FastQC
 Run fastqc on simulated data files sim_data_s1.fq.gz and sim_data_s2.fq.gz:
 `$ fastqc results/sim_data_s1.fq.gz results/sim_data_s2.fq.gz --outdir quality_control/`
 
@@ -44,6 +45,16 @@ Output:
 -rw-rw-r-- 1 natassja natassja 1754191 Mar  8 12:23 sim_data_s1_fastqc.zip
 -rw-rw-r-- 1 natassja natassja  931640 Mar  8 12:23 sim_data_s2_fastqc.html
 -rw-rw-r-- 1 natassja natassja 1804408 Mar  8 12:23 sim_data_s2_fastqc.zip
+
+FastQC does not help us determine whether sequences are deaminated properly or not. 
+
+#### Fastp
+Fastp is used to trim, merge, and quality filter reads. Reads need to be trimmed and filtered before they are suitable for input to bwa. 
+
+#### bwa-aln
+
+#### mapDamage
+
 
 
 
