@@ -79,6 +79,10 @@ Activate environment:
 
 Run mapDamage: 
 
+`mapDamage -i sim_aln.sam -r GRCh38.p14.genome.fa`
+
+Results: 
+
 
 
 
