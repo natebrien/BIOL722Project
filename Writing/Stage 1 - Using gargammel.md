@@ -59,11 +59,25 @@ FastQC does not help us determine whether sequences are deaminated properly or n
 #### Fastp
 Fastp is used to trim, merge, and quality filter reads. Reads need to be trimmed and filtered before they are suitable for input to bwa. 
 
-#### bwa-aln
+#### bwa-mem
+
+Ran: 
+` bwa mem GRCh38.p14.genome.fa /2/scratch/natassja/Bio722/term_project/gargammel/quality_control/sim_data_s1_trimmed.fq /2/scratch/natassja/Bio722/term_project/gargammel/quality_control/sim_data_s2_trimmed.fq > sim_aln.sam
+`
 
 #### mapDamage
 
+Install mapDamage: 
 
+`conda create -n mapdamage-env`
+
+`conda install -c bioconda mapdamage2`
+
+Activate environment: 
+
+`conda activate mapdamage-env`
+
+Run mapDamage: 
 
 
 
