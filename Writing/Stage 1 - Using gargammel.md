@@ -67,7 +67,17 @@ Ran:
 
 #### mapDamage
 
+Install mapDamage: 
 
+`conda create -n mapdamage-env`
+
+`conda install -c bioconda mapdamage2`
+
+Activate environment: 
+
+`conda activate mapdamage-env`
+
+Run mapDamage: 
 
 
 
