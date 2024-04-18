@@ -27,8 +27,20 @@ However, the version of R that is required is not available from conda channels,
 `./configure`
 `make`
 
+Finally, run `conda activate epipaleomix-env`. 
 ## Generating the makefile
 EpiPALEOMIX requires three inputs: a BAM alignment file (indexed), a BED file containing coordinates for the regions of interest, and a reference genome in FASTA format (also indexed). Paths to these files and names must be provided in a makefile. EpiPALEOMIX can generate a verbose and a simple makefile. 
+
+To create a template makefile, run: 
+
+`$ epiPALEOMIX simple makefile > simulated_seqs.yaml`
+
+This template indicates where the paths to the input files must be specified. 
+The input file paths were specified as follows: 
+
+Reference FASTA file: 
+BAM file with sequences aligned: 
+BED file with regions of interest: /home/natassja/sequences/cpgs_all.bed
 
 
 
