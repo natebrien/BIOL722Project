@@ -63,8 +63,6 @@ Fastp is used to trim, merge, and quality filter reads. Reads need to be trimmed
 
 Ran: 
 ` bwa mem GRCh38.p14.genome.fa /2/scratch/natassja/Bio722/term_project/gargammel/quality_control/sim_data_s1_trimmed.fq /2/scratch/natassja/Bio722/term_project/gargammel/quality_control/sim_data_s2_trimmed.fq > sim_aln.sam
-`
-
 #### mapDamage
 
 Install mapDamage: 
