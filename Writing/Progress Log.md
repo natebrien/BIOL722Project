@@ -6,7 +6,6 @@
 2024-03-08
 - Ran gargammel to generate simulated sequence data
 
-
 2024-03-27
 - Ran bwa mem to align simulated sequences to human reference genome, generate SAM file
 
@@ -14,4 +13,5 @@
 - Ran mapDamage2 to generate misincorporation plot
 
 2024-04-01
-- 
+- Installed DamMet and attempted to install epiPALEOMIX
+- asked for help on installing older version of R for epiPALEOMIX
