@@ -24,6 +24,9 @@ Run bwa sampe:
 Then, convert the SAM file to a BAM file:
 `samtools view -b sim_seqs_trim_USER_aln.sam > sim_seqs_trim_USER_aln.bam`
 
+Sort the BAM file (required later):
+`samtools sort sim_seqs_trim_USER_aln.bam > sim_seqs_trim_USER_aln_sorted.bam`
+
 Run mapDamage to generate a plot: 
 `mapDamage -i sim_seqs_trim_USER_aln.bam -r GRCh38.p14.genome.fa`
 
