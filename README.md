@@ -2,21 +2,12 @@
 Bioinformatics course final project - analysing methylation data
 
 ## Overview
-This project will use simulated ancient DNA sequences (using *gargammel*) to compare the outputs of two ancient DNA methylation tools, *epiPALOMIX* and *DamMet*. 
+This project will use simulated ancient DNA sequences (using *gargammel*) to compare the outputs of two ancient DNA methylation tools, *epiPALEOMIX* and *DamMet*. 
 
-## Methods
+## Methods Summary
 
-### Simulating aDNA sequence data using *gargammel*
-  Gargammel will be used to simulate aDNA sequence data for this project. Although gargammel has the capability to simulate both modern human and bacterial contamination in the sample, only the endogenous human sequences will be simulated. The resulting simulated sequences have fragmentation patterns and deamination patterns characteristic of aDNA, and have Illumina adapters added to simulate raw sequencing reads. Gargammel putputs gzipped fastq files. Gargammel also does not simulate the effects of bisulfite treatment. 
+First, the program gargammel was used to simulate aDNA sequence data (Renaud et al., 2017). Then, trimming and filtering of reads was performed using fastp (Chen et al., 2018). Bioinformatic USER treatment was performed using the command line tool awk and the package seqtk. USER and non-USER treated sequences were each aligned to the human genome using the Burrows-Wheeler backtrack algorithm (aln) (Li & Durbin, 2009), and using ancient settings (Karpinski et al., 2020) to generate SAM and BAM files. Following alignment, damage profiles of both USER and non-USER treated sequences were generated using mapDamage2 (Jónsson et al., 2013). BAM files from alignments of non-USER and USER treated sequences were used to generate methylation estimates in epiPALEOMIX (Hanghøj et al., 2016) and DamMet (Hanghøj et al., 2019). 
 
-### Quality control
-  FastQC and fastp will be used to evaluate quality of the reads simulated by gargammel. fastp will also be used to trim off Illumina adapters.  
+## Structure of the Repository
 
-### Bioinformatic USER treatment of simulated sequence data
-  USER treatment (UDG + endoVIII) is used to correct for deamination profiles in aDNA. USER (a specific enzyme sold by NEB) has a combination of uracil deglycosylase and endonuclease VIII activity, which excises uracils and creates single-nucleotide gaps in the phosphodiester backbone, respectively. Since deamination of unmethylated cytosines both occurs at a lower frequency than methylated cytosines, and occurs primarily at the ends of fragments, the majority of these uracils will be present within the first and last 5 bp of reads. Therefore, a computational USER treatment can be performed by trimming the ends of reads. 
-
-### Regional methylation estimation using *epiPALEOMIX*
-
-### Regional methylation estimationg using *DamMet*
-
-## Discussion and Conclusions
+The reproducible code used to run these analyses can be found in the files titled "Step 1", "Step 2" and so on. Also included is the "code notebook" (titled "Daily Notes") which are my rough notes taken while doing research, analysing, troubleshooting, etc.
