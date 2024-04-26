@@ -10,4 +10,4 @@ First, the program gargammel was used to simulate aDNA sequence data (Renaud et 
 
 ## Structure of the Repository
 
-The reproducible code used to run these analyses can be found in the files titled "Step 1", "Step 2" and so on. Also included is the "code notebook" (titled "Daily Notes") which are my rough notes taken while doing research, analysing, troubleshooting, etc.
+The reproducible code used to run these analyses can be found in the files titled "Step 1", "Step 2" and so on. Also included is the "code notebook" (folder "Daily Notes") which are my rough notes taken while doing research, analysing, troubleshooting, etc. The "Writing" folder contains the project proposal. 
