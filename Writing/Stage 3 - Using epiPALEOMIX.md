@@ -42,9 +42,9 @@ To create a template makefile, run:
 This template indicates where the paths to the input files must be specified. 
 The input file paths were specified as follows: 
 
-Reference FASTA file: 
+Reference FASTA file: **/2/scratch/natassja/Bio722/term_project/gargammel/alignment/ref_db/GRCh38.p14.genome.fa**
 BAM file with sequences aligned: 
-BED file with regions of interest: /home/natassja/sequences/cpgs_all.bed
+BED file with regions of interest: **/home/natassja/sequences/cpgs_all.bed**
 
 
 
