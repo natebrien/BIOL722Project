@@ -42,8 +42,13 @@ Align:
 Repeat for second file. 
 
 Then run the following to generate a SAM file from the two SAI files:
-`bwa sampe GRCh38.p14.genome.fa sim_seqs_s1_trim_aln.sai sim_seqs_s2_trim_aln.sai sim_seqs_s1_trimmed sim_seqs_s2_trimmed > sim_seqs_trim_aln.sam `
+`bwa sampe GRCh38.p14.genome.fa sim_seqs_s1_trim_aln.sai sim_seqs_s2_trim_aln.sai sim_seqs_s1_trimmed sim_seqs_s2_trimmed > sim_seqs_s1s2_trim_aln.sam `
 
+Cover the SAM file to a BAM file
+`samtools view -b sim_seqs_s1s2_trim_aln_sam > sim_seqs_s1s2_trim_aln.bam`
+
+Sort the BAM file:
+`samtools sort sim_seqs_s1s2_trim_aln.bam > sim_seqs_s1s2_trim_aln_sorted.bam`
 #### mapDamage
 
 Run mapDamage: 
