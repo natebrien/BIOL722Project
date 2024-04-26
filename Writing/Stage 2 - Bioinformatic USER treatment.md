@@ -2,7 +2,6 @@
 ## What I'd like a bioinformatic USER treatment to do
 
 Ideally, a bioinformatic USER treatment would recapitulate the enzymatic action of the USER enzyme. 
-
 ## What this bioinformatic USER treatment actually did
 
 Examined misincorporation files output from mapDamage to obtain frequencies of C -> T and G -> A conversions: 
@@ -13,16 +12,19 @@ Examined misincorporation files output from mapDamage to obtain frequencies of C
 Used the output of these to trim off bases from the sequences using Seqtk:
 
 `seqtk trimfq -b 9 -e 9 sim_seqs_s1_trimmed.fastq.gz > sim_seqs_s1_trim_USER`
-& do for s2 as well. 
+Repeat for second file. 
 
 Once the sequences have been trimmed we need to align them to the reference genome as before: 
 `bwa aln GRCH38.p14.genome.fa -n 0.01 -o 2 -l 16500 -t 10 /2/scratch/natassja/Bio722/term_project/gargammel/bioinformatic_USER/sim_seqs_s1_trim_USER.fq.gz > sim_seqs_s1_trim_USER_aln.sai
 Repeat for second file. 
 
+Run bwa sampe: 
+`bwa sampe GRCh38.p14.genome.fa sim_seqs_s1_trim_USER_aln.sai sim_seqs_s2_trim_USER_aln.sai sim_seqs_s1_trim_USER sim_seqs_s2_trim_USER > sim_seqs_trim_USER_aln.sam `
+
 Then, convert the SAM file to a BAM file:
-`samtools view -b in.sam > out.bam`
+`samtools view -b sim_seqs_trim_USER_aln.sam > sim_seqs_trim_USER_aln.bam`
 
 Run mapDamage to generate a plot: 
-`mapDamage -i BAM -r REFERENCE`
+`mapDamage -i sim_seqs_trim_USER_aln.bam -r GRCh38.p14.genome.fa`
 
 The plot should show significantly reduced damage patterns (absence of 'smile'). 
