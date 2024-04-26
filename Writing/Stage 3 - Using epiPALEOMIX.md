@@ -1,4 +1,4 @@
-EpiPALEOMIX is a program for creating methylation maps, developed by Kristian Hanghoj. 
+EpiPALEOMIX is a program for creating methylation and nucleosome maps.
 # Install epiPALEOMIX
 
 EpiPALEOMIX requires the following: 
