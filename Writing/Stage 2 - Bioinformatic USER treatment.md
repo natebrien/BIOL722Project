@@ -10,15 +10,14 @@ Examined misincorporation files output from mapDamage to obtain frequencies of C
 `awk -F' ' '$2<0.01{print$1}' 5pCtoT_freq.txt | head -1`
 `awk -F' ' '$2<0.01{print$1}' 3pGtoA_freq.txt | head -1`
 
-Used the output of these to trim off bases from the sequences using fqtools: 
+Used the output of these to trim off bases from the sequences using Seqtk:
 
-`conda activate fqtools-env`
-`fqtools trim -o sim_data_s1_USER -s 7 sim_data_s1_trimmed.fastq.gz`
-
-`fqtools trim -o sim_data_s2_USER -s 7 sim_data_s2_trimmed.fastq.gz`
+`seqtk trimfq -b 9 -e 9 sim_seqs_s1_trimmed.fastq.gz > sim_seqs_s1_trim_USER`
+& do for s2 as well. 
 
 Once the sequences have been trimmed we need to align them to the reference genome as before: 
-`bwa aln ...`
+`bwa aln GRCH38.p14.genome.fa -n 0.01 -o 2 -l 16500 -t 10 /2/scratch/natassja/Bio722/term_project/gargammel/bioinformatic_USER/sim_seqs_s1_trim_USER.fq.gz > sim_seqs_s1_trim_USER_aln.sai
+Repeat for second file. 
 
 Then, convert the SAM file to a BAM file:
 `samtools view -b in.sam > out.bam`
@@ -26,4 +25,4 @@ Then, convert the SAM file to a BAM file:
 Run mapDamage to generate a plot: 
 `mapDamage -i BAM -r REFERENCE`
 
-
+The plot should show significantly reduced damage patterns (absence of 'smile'). 

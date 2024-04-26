@@ -8,3 +8,7 @@ DamMet requires three files as inputs:
 - BAM file with aligned sequences (use -b flag)
 - Reference genome file (.fa formatted) (-r flag)
 - Chromosome of interest (-c flag)
+
+Run: 
+`conda activate dammet-env`
+`DamMet estDeam -b `
