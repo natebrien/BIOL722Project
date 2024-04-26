@@ -3,7 +3,9 @@ Gargammel will be used to simulate aDNA sequence data for this project. Although
 ### Simulate sequences with gargammel
 
 First activate conda environment:
-```conda activate /home/sam/miniconda3/envs/gargammel```
+```
+conda activate /home/sam/miniconda3/envs/gargammel
+```
 
 Create the folders necessary for gargammel: 
 ```mkdir data```
