@@ -7,10 +7,10 @@ Ideally, a bioinformatic USER treatment would recapitulate the enzymatic action 
 Examined misincorporation files output from mapDamage to obtain frequencies of C -> T and G -> A conversions: 
 
 ```
-awk -F' ' '$2<0.01{print$1}' 5pCtoT_freq.txt | head -1
+awk -F' ' '$2<0.02{print$1}' 5pCtoT_freq.txt | head -1
 ```
 ```
-awk -F' ' '$2<0.01{print$1}' 3pGtoA_freq.txt | head -1
+awk -F' ' '$2<0.02{print$1}' 3pGtoA_freq.txt | head -1
 ```
 
 Used the output of these to trim off bases from the sequences using Seqtk:
