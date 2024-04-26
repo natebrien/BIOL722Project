@@ -13,6 +13,7 @@ Create the folders necessary for gargammel:
 `mkdir cont`'
 
 Download the reference genome into endo:
+`cd endo`
 `wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.29_GRCh38.p14/GCA_000001405.29_GRCh38.p14_genomic.fna.gz`
 `mv GCA_000001405.29_GRCh38.p14_genomic.fna.gz GRCh38.p14.genome.fa.gz`
 `gunzip GRCh.p14.genome.fa.gz`

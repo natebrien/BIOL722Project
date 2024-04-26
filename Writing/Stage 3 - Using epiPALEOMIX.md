@@ -44,8 +44,6 @@ Reference FASTA file: **/2/scratch/natassja/Bio722/term_project/gargammel/alignm
 BAM file with sequences aligned: **/2/scratch/natassja/Bio722/term_project/gargammel/quality_control/sim_seqs_s1s2_trim_aln_sorted.bam**
 BED file with regions of interest: **/home/natassja/sequences/cpgs_all.bed**
 
-Should be able to run: 
+Run: 
 `epiPALEOMIX run simulated_seqs.yaml`
-
-However, this returned the following error: 
 
