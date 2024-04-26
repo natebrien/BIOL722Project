@@ -21,5 +21,3 @@ Since DamMet processes by chromosome, create a file called chromosomes.txt that 
 Then, run the following: 
 `for chr in ``cat chromosomes.txt```; do DamMet estDeam -b sim_seqs_s1s2_trim_aln_sorted.bam -r reference -c $chr -B /home/natassja/sequences/cpgs_all.bed -O sites_$chr; done
 
-If your .bam file is not sorted, run: 
-`samtools sort sim_seqs_s1s2_trim_aln.bam > sim_seqs_s1s2_trim_aln_sorted.bam`
