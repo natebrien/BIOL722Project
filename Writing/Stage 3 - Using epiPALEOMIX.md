@@ -1,5 +1,4 @@
 EpiPALEOMIX is a program for creating methylation maps, developed by Kristian Hanghoj. 
-
 # Install epiPALEOMIX
 
 EpiPALEOMIX requires the following: 
@@ -27,7 +26,6 @@ However, the version of R that is required is not available from conda channels,
 `make`
 
 Finally, run `conda activate epipaleomix-env`. 
-
 ## Optional: dry run
 epiPaleomix provides an example YAML file so you can test that the program is working correctly. Download example.yaml using wget, then run using the following: 
 
@@ -37,14 +35,17 @@ EpiPALEOMIX requires three inputs: a BAM alignment file (indexed), a BED file co
 
 To create a template makefile, run: 
 
-`$ epiPALEOMIX simple makefile > simulated_seqs.yaml`
+`epiPALEOMIX simple makefile > simulated_seqs.yaml`
 
 This template indicates where the paths to the input files must be specified. 
 The input file paths were specified as follows: 
 
 Reference FASTA file: **/2/scratch/natassja/Bio722/term_project/gargammel/alignment/ref_db/GRCh38.p14.genome.fa**
-BAM file with sequences aligned: 
+BAM file with sequences aligned: **/2/scratch/natassja/Bio722/term_project/gargammel/quality_control/sim_seqs_s1s2_trim_aln_sorted.bam**
 BED file with regions of interest: **/home/natassja/sequences/cpgs_all.bed**
 
+Should be able to run: 
+`epiPALEOMIX run simulated_seqs.yaml`
 
+However, this returned the following error: 
 
