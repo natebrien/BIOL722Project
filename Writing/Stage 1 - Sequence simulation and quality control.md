@@ -1,5 +1,5 @@
-## Background on gargammel.
-Gargammel will be used to simulate aDNA sequence data for this project. Although gargammel has the capability to simulate both modern human and bacterial contamination in the sample, only the endogenous human sequences will be simulated. The resulting simulated sequences have fragmentation patterns and deamination patterns characteristic of aDNA, and have Illumina adapters added to simulate raw sequencing reads. Gargammel outputs gzipped fastq files. Gargammel also does not simulate the effects of bisulfite treatment.
+## Background on gargammel
+Gargammel will be used to simulate aDNA sequence data for this project. Although gargammel has the capability to simulate both modern human and bacterial contamination in the sample, only the endogenous human sequences will be simulated. The resulting simulated sequences have fragmentation patterns and deamination patterns characteristic of aDNA, and have Illumina adapters added to simulate raw sequencing reads. Gargammel outputs gzipped fastq files.
 ### Simulate sequences with gargammel
 
 First activate conda environment:
